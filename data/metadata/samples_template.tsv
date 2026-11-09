@@ -1,0 +1,7 @@
+Run	BioProject	tissue	tissue_region	treatment	OBS
+SRR4431598	PRJNA348403	root	white_part	not_reported	RNA-seq da parte branca da raiz de D. catenatum. O registro descreve um atlas de tecidos de um indivíduo silvestre cujo genoma foi sequenciado.
+SRR4431599	PRJNA348403	root	green_tip	not_reported	RNA-seq da parte verde da raiz de D. catenatum, no mesmo contexto de atlas de tecidos
+SRR18319851	PRJNA815882 	root	not_reported	NAA 20_mg_L	root treated by 20 mg/L NAA
+SRR18319853	PRJNA815882	root	not_reported	NAA_0_mg_L	root without NAA treatment
+SRR18319854	PRJNA815882	root	not_reported	NAA_5_mg_L	root treated by 5 mg/L NAA
+SRR18319855	PRJNA815882	root	not_reported	NAA 10_mg_L	root treated by 10 mg/L NAA

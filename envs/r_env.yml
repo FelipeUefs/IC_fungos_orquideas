@@ -1,0 +1,16 @@
+name: ic_bioinfo_r
+channels:
+  - conda-forge
+  - bioconda
+  - r
+dependencies:
+  - r-base>=4.3.0
+  - r-tidyverse>=2.0.0
+  - r-vegan>=2.6_4
+  - r-ggplot2>=3.4.0
+  - r-patchwork
+  - r-scales
+  - r-optparse
+  - r-readr
+  - r-dplyr
+  - bioconductor-phyloseq>=1.44.0

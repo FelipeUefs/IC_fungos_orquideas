@@ -1,0 +1,48 @@
+# Credenciais locais
+.env
+.env.*
+!.env.example
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.ipynb_checkpoints/
+
+# R
+.Rhistory
+.RData
+.Ruserdata
+.Rproj.user/
+
+# Quarto
+.quarto/
+/_site/
+
+# Dados de sequenciamento e alinhamentos
+*.fastq
+*.fastq.gz
+*.fq
+*.fq.gz
+*.sra
+*.sam
+*.bam
+*.bai
+*.cram
+*.crai
+
+# Dados volumosos e bancos locais
+/data/raw/*
+!/data/raw/.gitkeep
+/data/processed/*
+!/data/processed/.gitkeep
+/databases/
+*.dmnd
+*.bt2
+*.bt2l
+
+# Arquivos temporários
+*.tmp
+*.swp
+*~
