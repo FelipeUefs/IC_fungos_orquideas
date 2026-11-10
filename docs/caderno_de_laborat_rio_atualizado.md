@@ -391,7 +391,7 @@ A partir da pasta `data/raw/`, a contagem de linhas foi obtida por descompressã
 `    fi`
 
 `done`
-
+```
 
 ### 4. Parâmetros e justificativas
 
