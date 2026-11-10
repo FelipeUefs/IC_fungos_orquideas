@@ -42,7 +42,18 @@ venv/
 *.bt2
 *.bt2l
 
+# Arquivos SRA locais
+/data/sra/*
+!/data/sra/.gitkeep
+
 # Arquivos temporários
 *.tmp
 *.swp
 *~
+
+# Arquivos de bloqueio de editores
+.~lock.*
+
+# Dados SRA locais
+/data/sra/*
+!/data/sra/.gitkeep
