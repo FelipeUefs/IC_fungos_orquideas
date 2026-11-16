@@ -58,22 +58,22 @@ Preencher com os identificadores reais. Se uma biblioteca tiver vários runs, ac
 
 - MultiQC: \>=1.19
 
-- fastp: \[versão\]
+- fastp: 1.3.6 (utilizado na Atividade 5)
 
 - Compressão: pigz
 
-- Manifesto de checksums dos dados: NA
+- Manifesto de checksums dos dados: `data/metadata/checksums\_sha256.txt` (12 entradas validadas na Sessão 03)
 
 ## Progresso individual
 
 | Biblioteca / run | Metadados | Dados verificados | QC bruto | fastp | QC após fastp | Interpretação | Revisão cruzada |
 | - | - | - | - | - | - | - | - |
-| PRJNA348403 / SRR4431598 | concluído | concluído | pendente | pendente | pendente | pendente | pendente |
-| PRJNA348403/ SRR4431599 | concluído | concluído | pendente | pendente | pendente | pendente | pendente |
-| PRJNA815882/SRR18319851 | concluído | concluído | pendente | pendente | pendente | pendente | pendente |
-| PRJNA815882/SRR18319853 | concluído | concluído | pendente | pendente | pendente | pendente | pendente |
-| PRJNA815882/SRR18319854 | concluído | concluído | pendente | pendente | pendente | pendente | pendente |
-| PRJNA815882/SRR18319855 | concluído | concluído | pendente | pendente | pendente | pendente | pendente |
+| PRJNA348403 / SRR4431598 | concluído | concluído | concluído | concluído | concluído | concluído (preliminar) | pendente |
+| PRJNA348403/ SRR4431599 | concluído | concluído | concluído | concluído | concluído | concluído (preliminar) | pendente |
+| PRJNA815882/SRR18319851 | concluído | concluído | concluído | concluído | concluído | concluído (preliminar) | pendente |
+| PRJNA815882/SRR18319853 | concluído | concluído | concluído | concluído | concluído | concluído (preliminar) | pendente |
+| PRJNA815882/SRR18319854 | concluído | concluído | concluído | concluído | concluído | concluído (preliminar) | pendente |
+| PRJNA815882/SRR18319855 | concluído | concluído | concluído | concluído | concluído | concluído (preliminar) | pendente |
 
 
 ## Registro de sessão — 2026-11-03 — Sessão 01
@@ -115,7 +115,7 @@ Preencher com os identificadores reais. Se uma biblioteca tiver vários runs, ac
 
 ### 3. Procedimento executado
 
-1. Leitura do arquivo `samples\_template.tsv` para identificar as 6 bibliotecas.
+1. Leitura do arquivo `samples\\\_template.tsv` para identificar as 6 bibliotecas.
 
 2. Pesquisa no site NCBI SRA Run Selector pelos BioProjects PRJNA348403 e PRJNA815882 para descobrir o Layout (PAIRED) e o Tamanho dos arquivos.
 
@@ -124,7 +124,7 @@ Preencher com os identificadores reais. Se uma biblioteca tiver vários runs, ac
 Comandos realmente executados:
 
 ```
-\# Verificação de espaço    
+\\\# Verificação de espaço      
 df -h  
 ```
 
@@ -137,8 +137,6 @@ df -h
 - Log de erros: não registrado
 
 - Status de saída: não registrado
-
-- Duração observada: aprox. 2h30 horas
 
 ### 4. Parâmetros e justificativas
 
@@ -175,7 +173,7 @@ df -h
 
 ### 7. Problemas, erros e correções
 
-- Problema: O arquivo original `samples\_template.tsv` não continha informações sobre Layout, Réplicas Biológicas ou Tamanho dos arquivos.
+- Problema: O arquivo original `samples\\\_template.tsv` não continha informações sobre Layout, Réplicas Biológicas ou Tamanho dos arquivos.
 
 - Hipótese sobre a causa: Tabela de metadados do projeto fornecida incompleta de propósito para exercício de consolidação.
 
@@ -189,7 +187,7 @@ df -h
 
 - Resultado principal: Tabela de metadados totalmente preenchida com layout PAIRED e estimativa de tamanho (total ~30.6 Gb).
 
-- Arquivos alterados: `Felipe\_lablog\_etapa1.md`
+- Arquivos alterados: `Felipe\\\_lablog\\\_etapa1.md`
 
 - Revisão solicitada a: Orientador
 
@@ -205,9 +203,9 @@ df -h
 
 - **Máquina:** felipe-gomes-B850M-D3HP
 
-- **Diretório de trabalho:** `/home/felipe-gomes/Documentos/IC\_fungos\_orquideas`
+- **Diretório de trabalho:** `/home/felipe-gomes/Documentos/IC\\\_fungos\\\_orquideas`
 
-- **Ambiente:** base e `ic\_bioinfo\_fungos`
+- **Ambiente:** base e `ic\\\_bioinfo\\\_fungos`
 
 - **Tarefa:** Atividade 2 (Criação de Ambiente) e Atividade 3 (Obtenção e verificação dos dados)
 
@@ -219,7 +217,7 @@ df -h
 
 | Entrada | Origem / caminho | Observação |
 | - | - | - |
-| Identificadores e layout PAIRED | `data/metadata/samples\_template.tsv` e inventário do lablog | Metadados consolidados na Atividade 1 |
+| Identificadores e layout PAIRED | `data/metadata/samples\\\_template.tsv` e inventário do lablog | Metadados consolidados na Atividade 1 |
 | Rede | Proxy institucional da UEFS | Proxy utilizado: `10.65.16.35:3128` |
 
 
@@ -227,9 +225,9 @@ df -h
 
 1. Correção do erro no `apt update` (remoção do repositório quebrado da Microsoft que impedia atualizações).
 
-2. Leitura e execução do arquivo de ambiente `envs/pipeline\_env.yml` contendo dependências como `sra-tools`, `fastqc`, `pigz` e ferramentas do pipeline.
+2. Leitura e execução do arquivo de ambiente `envs/pipeline\\\_env.yml` contendo dependências como `sra-tools`, `fastqc`, `pigz` e ferramentas do pipeline.
 
-3. Instalação e ativação do ambiente conda `ic\_bioinfo\_fungos` para isolamento de pacotes.
+3. Instalação e ativação do ambiente conda `ic\\\_bioinfo\\\_fungos` para isolamento de pacotes.
 
 4. Identificada a utilização de proxy institucional da UEFS para solucionar problemas de conexão (`Failed to call external services`).
 
@@ -242,24 +240,24 @@ df -h
 **Comandos relevantes registrados na sessão:**
 
 ```
-\# Correção do apt e repositórios  
-sudo rm /etc/apt/sources.list.d/vscode.list    
-sudo apt update    
-  
-\# Criação e ativação do ambiente  
-conda env create -f envs/pipeline\_env.yml    
-conda activate ic\_bioinfo\_fungos  
-  
-\# Acesso ao diretório de trabalho  
-cd data/raw  
-  
-\# Obtenção dos dados após configuração de proxy  
-for run in SRR4431598 SRR4431599 SRR18319851 SRR18319853 SRR18319854 SRR18319855; do  
-    fasterq-dump --split-files --progress "$run"  
-done  
-  
-\# Compressão dos 12 arquivos FASTQ gerados  
-pigz -p 4 \*.fastq
+\\\# Correção do apt e repositórios    
+sudo rm /etc/apt/sources.list.d/vscode.list      
+sudo apt update      
+    
+\\\# Criação e ativação do ambiente    
+conda env create -f envs/pipeline\\\_env.yml      
+conda activate ic\\\_bioinfo\\\_fungos    
+    
+\\\# Acesso ao diretório de trabalho    
+cd data/raw    
+    
+\\\# Obtenção dos dados após configuração de proxy    
+for run in SRR4431598 SRR4431599 SRR18319851 SRR18319853 SRR18319854 SRR18319855; do    
+    fasterq-dump --split-files --progress "$run"    
+done    
+    
+\\\# Compressão dos 12 arquivos FASTQ gerados    
+pigz -p 4 \\\*.fastq
 ```
 
 ### 4. Parâmetros e justificativas
@@ -275,7 +273,7 @@ pigz -p 4 \*.fastq
 
 | Produto / Run | Evidência disponível | Estado documentado |
 | - | - | - |
-| Ambiente Conda | `envs/pipeline\_env.yml` | Sucesso na ativação |
+| Ambiente Conda | `envs/pipeline\\\_env.yml` | Sucesso na ativação |
 | SRR4431598 | FASTQ R1 e R2 (.gz) | Extração e compressão concluídas |
 | SRR4431599 | FASTQ R1 e R2 (.gz) | Extração e compressão concluídas |
 | SRR18319851 | FASTQ R1 e R2 (.gz) | Extração e compressão concluídas |
@@ -301,7 +299,7 @@ A avaliação de qualidade por base, adaptadores e conteúdo GC está prevista p
 | Problema | Evidência | Tratamento / situação |
 | - | - | - |
 | Atualização de sistema bloqueada | `Erro: O repositório 'https://microsoft.com stable Release' não tem um arquivo Release` | O link com erro foi apagado no arquivo correspondente em `/etc/apt/sources.list.d/`. `apt update` executado com sucesso. |
-| Conflito de pacotes no terminal | Inicialização padrão no ambiente `(base)` do Miniforge | Utilizado o comando `conda activate ic\_bioinfo\_fungos` para garantir o isolamento das ferramentas do projeto. |
+| Conflito de pacotes no terminal | Inicialização padrão no ambiente `(base)` do Miniforge | Utilizado o comando `conda activate ic\\\_bioinfo\\\_fungos` para garantir o isolamento das ferramentas do projeto. |
 | Falha no acesso a serviços externos | `Failed to call external services` | Configuração de proxy institucional; download procedeu normalmente após correção |
 
 
@@ -323,9 +321,9 @@ A avaliação de qualidade por base, adaptadores e conteúdo GC está prevista p
 
 - **Máquina:** felipe-gomes-B850M-D3HP
 
-- **Diretório de trabalho:** `/home/felipe-gomes/Documentos/IC\_fungos\_orquideas`
+- **Diretório de trabalho:** `/home/felipe-gomes/Documentos/IC\\\_fungos\\\_orquideas`
 
-- **Ambiente:** `ic\_bioinfo\_fungos`
+- **Ambiente:** `ic\\\_bioinfo\\\_fungos`
 
 - **Tarefa:** Atividade 3 — Verificação dos dados brutos após compactação.
 
@@ -333,11 +331,11 @@ A avaliação de qualidade por base, adaptadores e conteúdo GC está prevista p
 
 ### 2. Entradas e pré-condições
 
-- **Entradas:** 12 arquivos `\*.fastq.gz` em `data/raw/`, referentes a seis runs paired-end.
+- **Entradas:** 12 arquivos `\\\*.fastq.gz` em `data/raw/`, referentes a seis runs paired-end.
 
 - **Origem:** FASTQ convertidos dos dados SRA e compactados com `pigz -p 4` na sessão anterior.
 
-- **Manifesto de integridade:** `data/metadata/checksums\_sha256.txt`.
+- **Manifesto de integridade:** `data/metadata/checksums\\\_sha256.txt`.
 
 ### 3. Procedimento executado
 
@@ -346,9 +344,9 @@ A avaliação de qualidade por base, adaptadores e conteúdo GC está prevista p
 A partir da pasta `data/raw/`, foi executado:
 
 ```
-`pigz -t \*.fastq.gz`
-
-`echo $?`
+\`pigz -t \\\*.fastq.gz\`  
+  
+\`echo $?\`
 ```
 
 **Resultado observado:** código de saída `0`, sem erros reportados.
@@ -358,11 +356,11 @@ A partir da pasta `data/raw/`, foi executado:
 A partir da pasta principal do projeto:
 
 ```
-`mkdir -p data/metadata`
-
-`sha256sum data/raw/\*.fastq.gz \> data/metadata/checksums\_sha256.txt`
-
-`sha256sum -c data/metadata/checksums\_sha256.txt`
+\`mkdir -p data/metadata\`  
+  
+\`sha256sum data/raw/\\\*.fastq.gz \\\> data/metadata/checksums\\\_sha256.txt\`  
+  
+\`sha256sum -c data/metadata/checksums\\\_sha256.txt\`
 ```
 
 **Resultado observado:** 12 entradas SHA-256; na conferência, os 12 arquivos retornaram `OK`.
@@ -372,25 +370,25 @@ A partir da pasta principal do projeto:
 A partir da pasta `data/raw/`, a contagem de linhas foi obtida por descompressão em fluxo e `wc -l`, com quatro linhas por leitura:
 
 ```
-`for r1 in \*\_1.fastq.gz; do`
-
-`    r2="$\{r1/\_1.fastq.gz/\_2.fastq.gz\}"`
-
-`    n1=$(pigz -dc "$r1" | wc -l)`
-
-`    n2=$(pigz -dc "$r2" | wc -l)`
-
-`    if (( n1 == n2 && n1 % 4 == 0 )); then`
-
-`        echo "OK: $r1 e $r2 possuem $((n1 / 4)) leituras cada."`
-
-`    else`
-
-`        echo "ATENÇÃO: verificar $r1 e $r2"`
-
-`    fi`
-
-`done`
+\`for r1 in \\\*\\\_1.fastq.gz; do\`  
+  
+\`    r2="$\\\{r1/\\\_1.fastq.gz/\\\_2.fastq.gz\\\}"\`  
+  
+\`    n1=$(pigz -dc "$r1" | wc -l)\`  
+  
+\`    n2=$(pigz -dc "$r2" | wc -l)\`  
+  
+\`    if (( n1 == n2 && n1 % 4 == 0 )); then\`  
+  
+\`        echo "OK: $r1 e $r2 possuem $((n1 / 4)) leituras cada."\`  
+  
+\`    else\`  
+  
+\`        echo "ATENÇÃO: verificar $r1 e $r2"\`  
+  
+\`    fi\`  
+  
+\`done\`
 ```
 
 ### 4. Parâmetros e justificativas
@@ -422,7 +420,7 @@ A partir da pasta `data/raw/`, a contagem de linhas foi obtida por descompressã
 
 **Contagens R1/R2:** 324.486.957 pares de leituras contabilizados, totalizando 648.973.914 leituras individuais.
 
-**Arquivo de evidência:** `data/metadata/checksums\_sha256.txt`.
+**Arquivo de evidência:** `data/metadata/checksums\\\_sha256.txt`.
 
 ### 6. Observações de qualidade
 
@@ -432,7 +430,7 @@ A análise de qualidade das sequências (qualidade por base, adaptadores, GC etc
 
 ### 7. Problemas, erros e correções
 
-- **Tentativa inicial:** `pigz -t \*.fastq.gz` foi executado na raiz do projeto e retornou `pigz: skipping: \*.fastq.gz does not exist`, porque os arquivos estavam em `data/raw/`.
+- **Tentativa inicial:** `pigz -t \\\*.fastq.gz` foi executado na raiz do projeto e retornou `pigz: skipping: \\\*.fastq.gz does not exist`, porque os arquivos estavam em `data/raw/`.
 
 - **Correção:** execução do teste dentro de `data/raw/`, com retorno `0`.
 
@@ -446,6 +444,218 @@ A análise de qualidade das sequências (qualidade por base, adaptadores, GC etc
 
 - **Próxima ação:** Iniciar a Atividade 4 (FastQC/MultiQC dos dados brutos).
 
+## Registro de sessão — Sessão 5 — Atividade 4 — Controle de qualidade dos dados brutos
+
+### 1. Identificação e objetivo
+
+- **Data exata da execução:** 16/11/2026
+
+- **Bolsista:** Felipe Gomes da Silva.
+
+- **Ambiente:** `ic\_bioinfo\_fungos`.
+
+- **Objetivo:** avaliar a qualidade das seis runs paired-end de *Dendrobium catenatum* antes do pré-processamento, usando FastQC e MultiQC.
+
+- **Entradas:** 12 arquivos `.fastq.gz` em `data/raw/` (R1 e R2 de cada run).
+
+### 2. Procedimento e ferramentas
+
+1. Executado **FastQC v0.13.0** nos 12 arquivos FASTQ brutos.
+
+2. Consolidados os relatórios individuais com **MultiQC**.
+
+3. Inspecionados os indicadores de qualidade por base, adaptadores, conteúdo GC e duplicação de sequências.
+
+**Saídas documentadas:**
+
+- `results/qc/fastqc\_raw/` — relatórios individuais do FastQC.
+
+- `results/qc/multiqc\_raw/multiqc\_raw\_report.html` — relatório consolidado.
+
+### 3. Resultados e interpretação preliminar
+
+- **Cobertura da análise:** seis runs, 12 arquivos paired-end, totalizando **324.486.957 pares** (**648.973.914 leituras individuais**) nos dados brutos.
+
+- **Qualidade por base:** predominantemente elevada, permitindo prosseguir para o pré-processamento.
+
+- **Adaptadores:** presença residual, especialmente na extremidade 3′ de parte das leituras de 150 bp, justificando o uso de `fastp`.
+
+- **Conteúdo GC:** aproximadamente 43–45% nos dados brutos, segundo a avaliação preliminar.
+
+- **Duplicação:** níveis relativamente altos em algumas bibliotecas; em RNA-seq, isso não demonstra, por si só, duplicação técnica e **não justifica deduplicação automática**.
+
+**Conclusão da Atividade 4:** controle de qualidade dos dados brutos **tecnicamente concluído** para as seis runs. As observações são preliminares e não equivalem à validação científica pelo orientador.
+
+
+## Registro de sessão — 2026-11-16 — Sessão 05 — Atividade 5: pré-processamento e controle de qualidade pós-fastp
+
+### 1. Identificação e objetivo
+
+- **Bolsista:** Felipe Gomes da Silva.
+
+- **Ambiente:** `ic\_bioinfo\_fungos`.
+
+- **Objetivo:** processar os seis pares de FASTQ com `fastp`, reavaliar a qualidade com FastQC/MultiQC e quantificar a retenção de leituras.
+
+- **Observação de cronologia:** a data acima corresponde à conclusão e consolidação dos resultados; 
+
+### 2. Entradas e procedimento
+
+**Entradas:** `data/raw/$\{RUN\}\_1.fastq.gz` e `data/raw/$\{RUN\}\_2.fastq.gz`, para cada uma das seis runs.
+
+**Ferramenta:** `fastp` v1.3.6, com os parâmetros documentados abaixo:
+
+```
+fastp \\  
+  --in1 data/raw/$\{RUN\}\_1.fastq.gz \\  
+  --in2 data/raw/$\{RUN\}\_2.fastq.gz \\  
+  --out1 data/processed/fastp/$\{RUN\}\_1.fastq.gz \\  
+  --out2 data/processed/fastp/$\{RUN\}\_2.fastq.gz \\  
+  --detect\_adapter\_for\_pe \\  
+  --qualified\_quality\_phred 20 \\  
+  --unqualified\_percent\_limit 40 \\  
+  --length\_required 30 \\  
+  --thread 4 \\  
+  --html results/reports/fastp/$\{RUN\}\_fastp.html \\  
+  --json results/reports/fastp/$\{RUN\}\_fastp.json
+```
+
+- A opção `--detect\_adapter\_for\_pe` foi utilizada para identificação de adaptadores em dados pareados; o algoritmo de sobreposição também pode realizar trimming.
+
+- Não foi aplicada deduplicação (`--dedup`) nem corte fixo de extremidades.
+
+- Os dados brutos foram preservados em `data/raw/`.
+
+### 2.1. Scripts e comandos utilizados na Atividade 5
+
+Os comandos abaixo documentam o fluxo executado, a partir da **raiz do projeto**. A variável `RUN` percorre as seis bibliotecas; o bloco `fastp` acima corresponde ao comando executado em cada iteração. A inclusão dos scripts nesta versão do caderno tem finalidade de reprodutibilidade, **não representa uma nova execução**.
+
+**A. Preparação dos diretórios e execução do `fastp` nas seis runs**
+
+```
+cd ~/Documentos/IC\_fungos\_orquideas  
+  
+mkdir -p data/processed/fastp results/reports/fastp  
+  
+for RUN in SRR4431598 SRR4431599 SRR18319851 SRR18319853 SRR18319854 SRR18319855; do  
+  fastp \\  
+    --in1 "data/raw/$\{RUN\}\_1.fastq.gz" \\  
+    --in2 "data/raw/$\{RUN\}\_2.fastq.gz" \\  
+    --out1 "data/processed/fastp/$\{RUN\}\_1.fastq.gz" \\  
+    --out2 "data/processed/fastp/$\{RUN\}\_2.fastq.gz" \\  
+    --detect\_adapter\_for\_pe \\  
+    --qualified\_quality\_phred 20 \\  
+    --unqualified\_percent\_limit 40 \\  
+    --length\_required 30 \\  
+    --thread 4 \\  
+    --html "results/reports/fastp/$\{RUN\}\_fastp.html" \\  
+    --json "results/reports/fastp/$\{RUN\}\_fastp.json"  
+done
+```
+
+**B. FastQC dos 12 arquivos processados**
+
+```
+mkdir -p results/qc/fastqc\_processed  
+fastqc -t 4 \\  
+  --outdir results/qc/fastqc\_processed \\  
+  data/processed/fastp/\*.fastq.gz
+```
+
+**C. Relatório consolidado MultiQC pós-processamento**
+
+```
+mkdir -p results/qc/multiqc\_processed  
+multiqc results/qc/fastqc\_processed \\  
+  --outdir results/qc/multiqc\_processed \\  
+  --filename multiqc\_processed\_report.html
+```
+
+**D. Conferência quantitativa da retenção usando os relatórios JSON do `fastp`**
+
+```
+python - \<\<'PYTHON'  
+import json  
+from pathlib import Path  
+  
+runs = \[  
+    "SRR4431598", "SRR4431599", "SRR18319851",  
+    "SRR18319853", "SRR18319854", "SRR18319855"  
+\]  
+  
+print(f"\{'RUN':\<15\} \{'ANTES':\>15\} \{'DEPOIS':\>15\} \{'RETENÇÃO':\>12\}")  
+print("-" \* 62)  
+  
+for run in runs:  
+    arquivo = Path(f"results/reports/fastp/\{run\}\_fastp.json")  
+    if not arquivo.exists():  
+        print(f"\{run:\<15\} ERRO: JSON não encontrado")  
+        continue  
+  
+    with arquivo.open(encoding="utf-8") as f:  
+        dados = json.load(f)  
+  
+    antes = dados\["summary"\]\["before\_filtering"\]\["total\_reads"\]  
+    depois = dados\["summary"\]\["after\_filtering"\]\["total\_reads"\]  
+    retencao = 100 \* depois / antes  
+    print(f"\{run:\<15\} \{antes:\>15,\} \{depois:\>15,\} \{retencao:\>11.4f\}%")  
+PYTHON
+```
+
+**Observação metodológica:** `total\_reads` no JSON soma as leituras de R1 e R2. Os números obtidos com o script D são os apresentados na tabela de comparação quantitativa desta sessão. Não foi usado `--dedup`.
+
+### 3. Controle de qualidade após processamento
+
+- **FastQC:** executado nos 12 arquivos processados, com relatórios em `results/qc/fastqc\_processed/`.
+
+- **MultiQC:** consolidado em `results/qc/multiqc\_processed/multiqc\_processed\_report.html`.
+
+- **Relatórios fastp:** HTML e JSON por run em `results/reports/fastp/`.
+
+- **Avaliação preliminar:** qualidade por base elevada, redução do conteúdo residual de adaptadores e retenção elevada de leituras. Os alertas de composição de bases, distribuição de comprimento e duplicação devem ser interpretados no contexto de RNA-seq; não indicam automaticamente falha do processamento.
+
+### 4. Comparação quantitativa antes/depois
+
+Os valores abaixo foram extraídos dos relatórios JSON do `fastp` e informados na conferência de 16/11/2026. **As contagens de leituras somam R1 + R2**; o número de pares corresponde à metade desses valores.
+
+| Run | Leituras antes (R1 + R2) | Leituras depois (R1 + R2) | Leituras descartadas | Retenção |
+| - | -: | -: | -: | -: |
+| SRR4431598 | 50.340.882 | 50.340.882 | 0 | 100,0000% |
+| SRR4431599 | 48.042.934 | 48.042.934 | 0 | 100,0000% |
+| SRR18319851 | 141.473.978 | 140.856.718 | 617.260 | 99,5637% |
+| SRR18319853 | 127.036.088 | 126.458.878 | 577.210 | 99,5456% |
+| SRR18319854 | 142.941.762 | 142.230.206 | 711.556 | 99,5022% |
+| SRR18319855 | 139.138.270 | 138.578.228 | 560.042 | 99,5975% |
+| **Total** | **648.973.914** | **646.507.846** | **2.466.068** | **99,6200%** |
+
+
+**Síntese:** foram preservados **323.253.923 pares** de um total inicial de **324.486.957 pares**, com perda de **1.233.034 pares** (0,3800%). Todas as runs apresentaram retenção superior a 99,5%. A retenção de 100% nas duas runs de 90 bp não exclui a possibilidade de trimming de adaptadores/bases sem descarte de leituras.
+
+### 5. Verificações e interpretação
+
+- [x] `fastp` executado nas seis runs.
+
+- [x] Arquivos FASTQ pareados processados gerados.
+
+- [x] Relatórios HTML e JSON do `fastp` gerados.
+
+- [x] FastQC executado nos 12 FASTQ processados.
+
+- [x] MultiQC pós-processamento gerado.
+
+- [x] Retenção calculada individualmente para as seis runs.
+
+- [x] Totais antes/depois e perdas calculados.
+
+- [x] Avaliação preliminar da qualidade registrada.
+
+- [ ] Revisão cruzada com os resultados de outro bolsista registrada.
+
+- [ ] Avaliação científica do orientador registrada.
+
+**Conclusão da Atividade 5:** pré-processamento e verificação técnica de qualidade **concluídos** nas seis runs. Os arquivos processados estão aptos a seguir para a próxima etapa técnica, condicionada às decisões científicas do projeto. Não há evidência, nas métricas disponíveis, de necessidade de repetir o `fastp`.
+
+
 ## Encerramento individual da Etapa 1
 
 - \[x\] Metadados das seis bibliotecas conferidos.
@@ -454,23 +664,43 @@ A análise de qualidade das sequências (qualidade por base, adaptadores, GC etc
 
 - \[x\] Dados utilizados verificados e identificados.
 
-- \[ \] FastQC e MultiQC brutos executados para o conjunto completo.
+- [x] 
 
-- \[ \] Protocolo do fastp aprovado e registrado.
+- FastQC e MultiQC brutos executados para o conjunto completo.
 
-- \[ \] fastp executado nas seis bibliotecas.
+- [x] 
 
-- \[ \] FastQC e MultiQC após processamento executados para o conjunto completo.
+- Parâmetros do protocolo `fastp` registrados e aplicados (aprovação formal do orientador não documentada).
 
-- \[ \] Comparações antes/depois concluídas.
+- [x] 
 
-- \[ \] Resultados comparados com os do colega.
+- fastp executado nas seis bibliotecas.
 
-- \[ \] Revisão cruzada registrada.
+- [x] 
 
-- \[ \] Relatório individual concluído.
+- FastQC e MultiQC após processamento executados para o conjunto completo.
 
-- \[ \] Pendências apresentadas ao orientador.
+- [x] 
 
-- Data do encerramento: NA
+- Comparação das contagens e retenção antes/depois concluída (outras métricas detalhadas pendentes).
+
+- [ ] 
+
+- Resultados comparados com os do colega.
+
+- [ ] 
+
+- Revisão cruzada registrada.
+
+- [x] 
+
+- Registro individual das Atividades 4 e 5 atualizado no caderno.
+
+- [ ] 
+
+- Pendências apresentadas ao orientador.
+
+- Data da atualização técnica das Atividades 4 e 5: 2026-11-16.
+
+- Encerramento formal da Etapa 1: pendente de revisão cruzada e encaminhamento ao orientador.
 

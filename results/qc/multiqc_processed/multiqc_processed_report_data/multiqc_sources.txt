@@ -1,0 +1,13 @@
+Module	Section	Sample Name	Source
+FastQC	all_sections	SRR4431598_1	/home/felipe-gomes/Documentos/IC_fungos_orquideas/results/qc/fastqc_processed/SRR4431598_1_fastqc.zip
+FastQC	all_sections	SRR4431598_2	/home/felipe-gomes/Documentos/IC_fungos_orquideas/results/qc/fastqc_processed/SRR4431598_2_fastqc.zip
+FastQC	all_sections	SRR4431599_1	/home/felipe-gomes/Documentos/IC_fungos_orquideas/results/qc/fastqc_processed/SRR4431599_1_fastqc.zip
+FastQC	all_sections	SRR4431599_2	/home/felipe-gomes/Documentos/IC_fungos_orquideas/results/qc/fastqc_processed/SRR4431599_2_fastqc.zip
+FastQC	all_sections	SRR18319851_1	/home/felipe-gomes/Documentos/IC_fungos_orquideas/results/qc/fastqc_processed/SRR18319851_1_fastqc.zip
+FastQC	all_sections	SRR18319851_2	/home/felipe-gomes/Documentos/IC_fungos_orquideas/results/qc/fastqc_processed/SRR18319851_2_fastqc.zip
+FastQC	all_sections	SRR18319853_1	/home/felipe-gomes/Documentos/IC_fungos_orquideas/results/qc/fastqc_processed/SRR18319853_1_fastqc.zip
+FastQC	all_sections	SRR18319853_2	/home/felipe-gomes/Documentos/IC_fungos_orquideas/results/qc/fastqc_processed/SRR18319853_2_fastqc.zip
+FastQC	all_sections	SRR18319854_1	/home/felipe-gomes/Documentos/IC_fungos_orquideas/results/qc/fastqc_processed/SRR18319854_1_fastqc.zip
+FastQC	all_sections	SRR18319854_2	/home/felipe-gomes/Documentos/IC_fungos_orquideas/results/qc/fastqc_processed/SRR18319854_2_fastqc.zip
+FastQC	all_sections	SRR18319855_1	/home/felipe-gomes/Documentos/IC_fungos_orquideas/results/qc/fastqc_processed/SRR18319855_1_fastqc.zip
+FastQC	all_sections	SRR18319855_2	/home/felipe-gomes/Documentos/IC_fungos_orquideas/results/qc/fastqc_processed/SRR18319855_2_fastqc.zip

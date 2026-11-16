@@ -46,7 +46,7 @@ venv/
 /data/sra/*
 !/data/sra/.gitkeep
 
-# Arquivos temporários
+# Arquivos temporarios
 *.tmp
 *.swp
 *~
